@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: temporal-service
+  namespace: temporal
+spec:
+  selector:
+    app: temporal-server
+  ports:
+    - protocol: TCP
+      port: 7233
+      targetPort: 7233
+  type: NodePort
+

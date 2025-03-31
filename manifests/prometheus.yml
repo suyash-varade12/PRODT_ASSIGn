@@ -1,0 +1,15 @@
+scrape_configs:
+  - job_name: 'temporal-server'
+    static_configs:
+      - targets: ['temporal:8000']
+  - job_name: 'temporal-worker'
+    static_configs:
+      - targets: ['172.27.0.7:8001']  # Use actual worker IP
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['172.17.0.1:9323']  # Docker metrics endpoint
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['98.81.181.128:9090']  # Prometheus metrics endpoint
+

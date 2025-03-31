@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temporal-web
+  namespace: temporal
+  labels:
+    app: temporal-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: temporal-web
+  template:
+    metadata:
+      labels:
+        app: temporal-web
+    spec:
+      containers:
+        - name: temporal-web
+          image: temporalio/web:latest
+          ports:
+            - containerPort: 8088
+          env:
+            - name: TEMPORAL_ADDRESS
+              value: "temporal-service:7233"
+
