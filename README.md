@@ -90,5 +90,34 @@ It is s used for managing workflows – kind of like an advanced task scheduler.
 It has a server and workers – the server handles workflows, and workers execute tasks.
 It stores data in a database – but not all databases work (SQLite didn’t work for us!).
 It exposes metrics – which we can monitor using Prometheus & Grafana.
-It runs on Docker & Kubernetes – and setting it up properly takes some effort.  
+It runs on Docker & Kubernetes – and setting it up properly takes some effort.
+
+
+# Workflows SetUp
+![image](https://github.com/user-attachments/assets/42c85ad4-3674-4fb7-a9b3-22de28246578)
+
+![image](https://github.com/user-attachments/assets/44bd2079-aaf4-4f1e-ab2c-5c4f98675ad7)
+
+# Monitoring Docker  containers on Grafana
+![image](https://github.com/user-attachments/assets/360b7abb-4b66-487e-b8e5-fa9382720561)
+![image](https://github.com/user-attachments/assets/c38c41d1-1068-40b6-8777-abe7db1172af)
+![image](https://github.com/user-attachments/assets/302a6284-b9b4-41a4-b7e5-f9867cae0da3)
+![image](https://github.com/user-attachments/assets/98cae43d-d4ce-4bdf-9483-77b1c70b6556)
+
+# Monitoring Temporal resources
+![image](https://github.com/user-attachments/assets/25eaca1f-e7d1-4f8f-a576-b664b58e2c9f)
+![image](https://github.com/user-attachments/assets/3bbd46e1-5c91-474a-832d-441f1ee612ce)
+![image](https://github.com/user-attachments/assets/040d53ef-9860-4897-b6ff-a1266bee3b5f)
+
+# Prometheus Query
+![image](https://github.com/user-attachments/assets/54c0717d-6468-491d-8842-60a6ca18a5ef)
+
+
+
+
+
+
+
+
+
 
