@@ -47,7 +47,12 @@ To monitor Docker containers:
 1. Ensured all **targets were up** in Prometheus (checked endpoints).  
 2. Confirmed that **Temporal Server was exposing metrics** (tested sample queries in Prometheus).  
 3. Created a **Grafana dashboard** for Temporal Server metrics.  
-4. Used **a predefined Docker dashboard** for monitoring containers.  
+4. Used **a predefined Docker dashboard** for monitoring containers.
+5. to ckeck metrics exploration
+    Get list of available targets in Prometheus:
+      curl http://localhost:9090/api/v1/targets | jq
+    To check the status of Prometheus targets and ensure that Prometheus is correctly scraping metrics
+      curl -s http://localhost:9090/api/v1/targets | jq '.data.activeTargets[] | {job: .discoveredLabels.job, health: .health, url: .scrapeUrl}'
 
 ### Step 3: Setting Up Worker and Workflows
      
@@ -69,6 +74,9 @@ To deploy temporal server on kubernetes i have used minikube and have written ma
                temporal_workflow_task_queue_poll_empty
                temporal_activity_completed
                temporal_activity_failed
+  Get ip of temporal server:
+    kubectl get svc temporal-server -n temporal -o jsonpath='{.spec.clusterIP}'
+
 
 
 
